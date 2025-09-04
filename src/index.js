@@ -15,6 +15,12 @@ app.use(express.json());
 import userRoutes from "./routes/users.js";
 app.use("/users", userRoutes);
 
+import projectRoutes from "./routes/projects.js";
+app.use("/projects", projectRoutes);
+
+import taskRoutes from "./routes/tasks.js";
+app.use("/tasks", taskRoutes);
+
 // Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
